@@ -1,0 +1,40 @@
+.group-card{
+  justify-content: center;
+  gap: 40px;
+}
+
+.card{
+  overflow: hidden;
+}
+
+.group-card .card-img-top{
+  height: 136.44px;
+}
+
+.group-card img:hover{
+  transform: scale(1.2);
+  transition: all 1s ease;
+}
+
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover{
+  color: unset;
+  text-decoration: none;
+}
+
+.group-card h5{
+  font-weight: bold;
+}
+
+.btn-close{
+  background: none;
+}
+
+.modal-header img:hover{
+  transform: none;
+  transition: none;
+}

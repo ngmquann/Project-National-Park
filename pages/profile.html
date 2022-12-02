@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-100">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nền tảng - Kiến thức cơ bản về WEB | Bảng tin</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Custom css - Các file css do chúng ta tự viết -->
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/profile.css">
+</head>
+
+<body>
+    <!-- loading page -->
+    <div class="w-100 text-center loading" style="height: 800px;background-color:black;position: absolute;z-index: 10000;opacity: 0.8;"><div class="spinner-border text-light" style="margin-top: 40vh;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div><div>Loading...</div></div>
+    <!-- scroll top -->
+    <button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- header -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container">
+            <img src="../assets/img/slider/logo-khu-vuon-14.jpg" alt="" width="120px" class="logo">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item item-inVietNam">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        In VietNam
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="../index.html">Vietnam Now</a>
+                        <a class="dropdown-item" href="#">Why not VN</a>
+                      </div>
+                    </li>
+                    <li class="nav-item item-nationPark">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            National Park
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="#">NORTHERN VN</a>
+                                    <ul class="list-group list-group-flush ml-4" style="list-style: none;">
+                                        <li class="img-nor pb-2"><img src="../assets/img/slider/hanoi-vietnam.jpg" width="80%" alt=""></li>
+                                        <li class="item-info"><a href="../pages/nationParkBaVi.html">> Ba Vi (Ha Noi)</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Ha Long</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Mai Chau</a></li>
+                                      </ul>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="#">CENTRAL VN</a>
+                                    <ul class="list-group list-group-flush ml-4" style="list-style: none;">
+                                        <li class="img-nor pb-2"><img src="../assets/img/slider/danang travel guide thumb.jpg" width="80%" alt=""></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Da Lat</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Hoi An</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Hue</a></li>
+                                      </ul>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="#">SOUTHERN VIETNAM</a>
+                                    <ul class="list-group list-group-flush ml-4" style="list-style: none;">
+                                        <li class="img-nor pb-2"><img src="../assets/img/slider/hochiminhVN.jpg" width="80%" alt=""></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Con Dao</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Binh Thuan</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Can Tho</a></li>
+                                      </ul>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="dropdown-item text-center img-nor"><img src="../assets/img/slider/flyout-map.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </li>
+                    <li class="nav-item item-thingToDo">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Things To Do
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <div class="row">
+                                    <div class="col-md-6 border-right">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <a class="dropdown-item text-center" href="#">HIGHLIGHS</a>
+                                                <ul style="list-style: none;" class="ml-5 mt-1">
+                                                    <li><a href="food.html" style="color: black">> Foods</a></li>
+                                                    <li><a href="food.html" style="color: black">> Nature</a></li>
+                                                    <li><a href="food.html" style="color: black">> Culture</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-4">
+                                                <a class="dropdown-item text-center" href="#">HOLIDAYS</a>
+                                                <ul style="list-style: none;" class="ml-5 mt-1">
+                                                    <li><a href="food.html" style="color: black">> Adventure</a></li>
+                                                    <li><a href="food.html" style="color: black">> Wellness</a></li>
+                                                    <li><a href="food.html" style="color: black">> Family</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <a class="dropdown-item" href="#">UPCOMING FESTIVALS & EVENTS</a>
+                                        <div class="row py-3 ">
+                                            <div class="col-8">
+                                                <img src="../assets/img/slider/thingTodo1.jpg" width="100%" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="row pb-5">
+                                            <div class="col-8">
+                                                <img src="../assets/img/slider/thingTodo2.jpg" width="100%" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-8 border-top py-3">
+                                                <a href="#">View all</a>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visa.html">Visa Requirement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="greentravel.html">Green Travel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="travel_offer.html">Travel Offers</a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="d-flex align-items-center">
+                          <a class="nav-link icon-user d-none btn btn-warning" href="../pages/login.html">Log in</i></a>
+                          <div class="icon-chao d-none"><a href="profile.html"><img src="../assets/img/icon/anime-nu.jpg" style="width:35px;border-radius: 50%;" alt=""></a>
+                              <span id="userName"></span>
+                          </div>
+                          <a class="nav-link logOut d-none" href="../pages/login.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                      </div>
+                  </li>
+                </ul>   
+            </div>
+        </div>  
+    </nav>
+    <!-- end header -->
+
+    <main role="main">
+        <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+      <div class="container content mt-5">
+        <div class="row">
+          <div class="col-2">
+            <div class="row row1">
+              <div class="col-sm-6 col-xl-4">
+                <img src="../assets/img/icon/hinh-anh-anime-cute-tren-wibu.webp" alt="" class="avt">
+              </div>
+              <div class="col-sm-6 col-xl-8">
+                <p class="name">hieutm09.01</p>
+                <div id="editProfile"><i class="fa-solid fa-pencil" style="color: rgb(136, 25, 86);"></i> Edit profile</div>
+              </div>
+            </div>
+            <hr>
+            <p id="changePassword"><i class="fa-solid fa-key" style="color: rgb(74, 74, 237);"></i> Change password</p>
+            <p id="booking"><i class="fa-solid fa-calendar-days" style="color: rgb(74, 74, 237);"></i> Booking history</p>
+            <p><i class="fa-solid fa-ticket" style="color: tomato;"></i> Voucher</p>
+          </div>
+            
+          <div class="col-10">
+            <div class="row" id="profile">
+              <p class="headerContent"><i class="fa-regular fa-address-card"></i> Profile</p>
+              <div class="des">Welcome to Vietnam Tourism</div>
+              <hr style="margin-top: 16px;">
+
+              <div id="contentProfile">
+                <div class="mb-3 row">
+                  <strong for="inputPassword" class="col-sm-2 col-form-label">Name</strong>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control ipt" value="Name">
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <strong for="inputPassword" class="col-sm-2 col-form-label">Email</strong>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control ipt" value="abc@gmail.com">
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <strong for="inputPassword" class="col-sm-2 col-form-label">Phone</strong>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control ipt" value="123456789">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row" id="changePass">
+              <div class="mb-3 row">
+                <strong for="inputPassword" class="col-sm-2 col-form-label">Password</strong>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control ipt">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <strong for="inputPassword" class="col-sm-2 col-form-label">New password</strong>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control ipt">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <strong for="inputPassword" class="col-sm-2 col-form-label">Confirm password</strong>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control ipt">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <div class="col-md-6"><button class="btn btn-success changePass">Confirm</button></div>     
+              </div>
+            </div>
+
+            <div class="row" id="ticket">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Status</th>
+                    <th scope="col">Day</th>
+                    <th scope="col">Hour</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">PRICE</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="info">
+                   
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- End block content -->
+    </main>
+
+    <hr>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4">
+                  <dt>
+                      <h4>Sign up for our newsletter</h4>
+                  </dt>
+                  <dd>Receive new travel stories from Vietnam once a month in your inbox.</dd>
+                  <dd>
+                      <form action="">
+                          <div class="mb-3">
+                              <input type="email" class="form-control p-3" id="email" placeholder="Your Email...">
+                          </div>
+                          <div>
+                              <button class="btn btn-primary w-100" type="button">Sign Up</button>
+                            </div>
+                      </form>
+                  </dd>
+              </div>
+              <div class="col-lg-4">
+                  <dt>
+                      <h4>INFOMATION</h4>
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Visas for VN</li>
+                          <li class="list-group-item">Beginner Guide</li>
+                          <li class="list-group-item">FAQs</li>
+                        </ul>
+                  </dt>
+              </div>
+              <div class="col-lg-4">
+                  <dt>
+                      <h4>FOLLOW US ON</h4>
+                      <ul class="d-flex flex-row">
+                          <li><img src="../assets/img/icon/Vietnam tourism.jpg" alt=""></li>
+                          <li><img src="../assets/img/icon/Vietnam tourism social web-2_4.jpg" alt=""></li>
+                          <li><img src="../assets/img/icon/Vietnam tourism social web-3_6.jpg" alt=""></li>
+                          <li><img src="../assets/img/icon/Vietnam tourism social web_4.jpg" alt=""></li>
+                          <li><img src="../assets/img/icon/Vietnam tourism social web-4_4.jpg" alt=""></li>
+                          <li><img src="../assets/img/icon/logo-bw.png" alt="" width="80%"></li>
+                      </ul>
+                  </dt>
+                  <dd>
+                      <p class="desc">
+                          Welcome to the official website of Vietnam National Administration of Tourism. Visit our social media pages for more travel inspiration.
+                      </p>
+                  </dd>
+              </div>
+          </div>
+          <hr>
+          <div class="copyright container">
+              <div class="row">
+                  <div class="col-md-5">
+                      © 2022 Official Website Vietnam Tourism
+                  </div>
+                  <div class="col-md-4">
+                      Email: contactGroup4@gmail.com
+                  </div>
+                  <div class="col-md-3">
+                      Privacy Policy
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+    <!-- end footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/popperjs/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom script - Các file js do mình tự viết -->
+    
+    <script src="../assets/js/app.js"></script>
+    <script>
+        $(document).ready(function(){
+            showUserName();
+            checkLogIn();
+            showHideIcon();
+            $('#changePass, #ticket').hide();
+            $("#changePassword").click(function(){
+              $("#contentProfile").hide();
+              $('#ticket').hide();
+              $('#changePass').show();
+            })
+            $("#booking").click(function(){
+              $("#contentProfile").hide();
+              $('#changePass').hide();
+              $('#ticket').show();
+            })
+            $("#editProfile").click(function(){
+              $("#contentProfile").show();
+              $('#changePass').hide();
+              $('#ticket').hide();
+            })
+            $('.changePass').click(function(){
+              alert("Change password successfully")
+            })
+            $('.logOut').click(function(){logOut()})
+            var tickets = JSON.parse(localStorage.getItem("tickets"))
+            $("#info").html(`<th scope="row" style="color:green">Confirm</th><td>${tickets.day}</td><td>${tickets.hours}:00 AM</td><td>${tickets.amount}</td><td>${tickets.price} $</td>`)
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+#navbar-tabs{
+    display: block;
+}
+#navbar-tabs .active a{
+    border-bottom: 3px solid red;
+}
+#menu_Overview .checked{
+    color: orange; 
+}
+#menu_BookTickets .dateSticket{
+    border: none;
+    border-bottom: 2px solid;
+    background-color: transparent;
+    outline: none;
+}
+.card-item{
+    background-color: transparent;
+    position: absolute;
+    height: 286px;
+    width: 100%;
+}
+.card-item:hover{
+    background-color: black;
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+}
+

@@ -1,0 +1,26 @@
+/* NavbarCSS */
+.navbar{
+    background-color: #fff;
+  }
+  nav .navbar-toggler{
+    background-color: gray;
+  }
+  nav .nav-item{
+    margin: 0px 10px !important;
+  }
+  nav .nav-item .nav-link{
+    color: gray !important;
+    font-family: unset;
+    font-weight: bolder;
+  }
+  
+  body {
+      color: #5a5a5a;
+    }
+/* End Navbar */
+
+#frmdangnhap #togglePassword{
+    position: absolute;
+    top:35%;
+    right: -25px;
+  }

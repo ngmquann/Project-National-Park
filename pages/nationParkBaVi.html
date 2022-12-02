@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-100">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nền tảng - Kiến thức cơ bản về WEB | Bảng tin</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Custom css - Các file css do chúng ta tự viết -->
+    <link rel="stylesheet" href="../assets/css/app.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/nationParkBaVi.css">
+</head>
+
+<body>
+    <!-- loading page -->
+    <div class="w-100 text-center loading" style="height: 800px;background-color:black;position: absolute;z-index: 10000;opacity: 0.8;"><div class="spinner-border text-light" style="margin-top: 40vh;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div><div>Loading...</div></div>
+    <!-- Back to top button -->
+    <button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- header -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container">
+            <img src="../assets/img/slider/logo-khu-vuon-14.jpg" alt="" width="120px" class="logo">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item item-inVietNam">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            In VietNam
+                          </a>
+                          <div class="dropdown-menu first-dropdown" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="../index.html">Vietnam Now</a>
+                            <a class="dropdown-item" href="#">Why not VN</a>
+                          </div>
+                    </li>
+                    <li class="nav-item item-nationPark">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            National Park
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="#">NORTHERN VN</a>
+                                    <ul class="list-group list-group-flush ml-4" style="list-style: none;">
+                                        <li class="img-nor pb-2"><img src="../assets/img/slider/hanoi-vietnam.jpg" width="80%" alt=""></li>
+                                        <li class="item-info"><a href="../pages/nationParkBaVi.html">> Ba Vi (Ha Noi)</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Ha Long</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Mai Chau</a></li>
+                                      </ul>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="#">CENTRAL VN</a>
+                                    <ul class="list-group list-group-flush ml-4" style="list-style: none;">
+                                        <li class="img-nor pb-2"><img src="../assets/img/slider/danang travel guide thumb.jpg" width="80%" alt=""></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Da Lat</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Hoi An</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Hue</a></li>
+                                      </ul>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <a class="dropdown-item" href="#">SOUTHERN VIETNAM</a>
+                                    <ul class="list-group list-group-flush ml-4" style="list-style: none;">
+                                        <li class="img-nor pb-2"><img src="../assets/img/slider/hochiminhVN.jpg" width="80%" alt=""></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Con Dao</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Binh Thuan</a></li>
+                                        <li class="item-info"><a href="/pages/nationParkBaVi.html">> Can Tho</a></li>
+                                      </ul>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="dropdown-item text-center img-nor"><img src="../assets/img/slider/flyout-map.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </li>
+                    <li class="nav-item item-thingToDo">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Things To Do
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <div class="row">
+                                    <div class="col-md-6 border-right">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <a class="dropdown-item text-center" href="#">HIGHLIGHS</a>
+                                                <ul style="list-style: none;" class="ml-5 mt-1">
+                                                    <li><a href="food.html" style="color: black">> Foods</a></li>
+                                                    <li><a href="food.html" style="color: black">> Nature</a></li>
+                                                    <li><a href="food.html" style="color: black">> Culture</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-4">
+                                                <a class="dropdown-item text-center" href="#">HOLIDAYS</a>
+                                                <ul style="list-style: none;" class="ml-5 mt-1">
+                                                    <li><a href="food.html" style="color: black">> Adventure</a></li>
+                                                    <li><a href="food.html" style="color: black">> Wellness</a></li>
+                                                    <li><a href="food.html" style="color: black">> Family</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <a class="dropdown-item" href="#">UPCOMING FESTIVALS & EVENTS</a>
+                                        <div class="row py-3 ">
+                                            <div class="col-8">
+                                                <img src="../assets/img/slider/thingTodo1.jpg" width="100%" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="row pb-5">
+                                            <div class="col-8">
+                                                <img src="../assets/img/slider/thingTodo2.jpg" width="100%" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-8 border-top py-3">
+                                                <a href="#">View all</a>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visa.html">Visa Requirement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="greentravel.html">Green Travel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="travel_offer.html">Travel Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="d-flex align-items-center">
+                            <a class="nav-link icon-user d-none btn btn-warning" href="../pages/login.html">Log in</i></a>
+                            <div class="icon-chao d-none"><a href="profile.html"><img src="../assets/img/icon/anime-nu.jpg" style="width:35px;border-radius: 50%;" alt=""></a>
+                                <span id="userName"></span>
+                            </div>
+                            <a class="nav-link logOut d-none" href="../pages/login.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                        </div>
+                    </li>
+                </ul>   
+            </div>
+        </div>  
+    </nav>
+    <!-- end header -->
+    <main role="main">
+        <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+        <!-- Carousel - Slider -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../assets/img/slider/vietnam-travel-hanoi.jpg">
+                    <div class="container">
+                        <div class="carousel-caption text-center">
+                            <h1 class="display-1">Ba Vi (Ha Noi)</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Tính năng Marketing -->
+        <section>
+            <div class="container">
+                <nav id="navbar-tabs" class="navbar navbar-light bg-light px-3">
+                    <ul class="nav nav-pills nav-tabs">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#menu_Overview">Overview</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#menu_Animals">Animals</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#menu_Plants">Plants</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#menu_BookTickets">Book Tickets</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="menu_Overview" class="tab-content-item">
+                            <div class="content">
+                                <p class="text-center" style="font-family:monospace;font-size:30px">Introduction</p>
+                                <p style="font-family:monospace">- Ba Vi National Park was established on January 16, 1991. Currently, the garden has a total area of ​​​​nearly 9,702.41 hectares, belonging to 15 communes and 5 districts: Ba Vi, Thach That, Quoc Oai of Hanoi City, Ky Son and Luong Son of Hoa Binh province.</p>
+                                <p style="font-family:monospace">- Ba Vi Mountain has 3 peaks: King Peak with an altitude of 1,296m, Tan Vien Peak with an altitude of 1,227m and Ngoc Hoa Peak with an altitude of 1,131m. According to the most recent survey, the flora and fauna of Ba Vi National Park are very rich and diverse with 2,181 species of trees, 503 species of medicinal plants, 65 species of mammals, 194 species of birds, 61 species of reptiles, and 27 species of food. habitats and 552 insect species. In which there are many rare and precious species recorded in the Red Book, many species of flora and fauna...</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.7861613344835!2d105.36050981485523!3d21.08120128596998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313461542bb47287%3A0xfc1784f698c57611!2zVsaw4budbiBRdeG7kWMgZ2lhIEJhIFbDrA!5e0!3m2!1svi!2s!4v1668249524060!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <hr>
+                                </div>
+                                <div class="col-2">
+                                    <p class="text-center" style="font-family:monospace;font-size:30px">Album</p>
+                                </div>
+                                <div class="col-5">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"> 
+                                    <img src="../assets/img/slider/nationParkBaVi/15684f5f6cf590abc9e4.jpg" alt="" width="100%" height="100%">
+                                </div>
+                                <div class="col-3"> 
+                                    <img src="../assets/img/slider/nationParkBaVi/2c752c9d2a6ad6348f7b.jpg" alt="" width="100%" height="100%">
+                                </div>
+                                <div class="col-3"> 
+                                    <img src="../assets/img/slider/nationParkBaVi/707150a870028c5cd513.jpg" alt="" width="100%" height="100%">
+                                </div>
+                                <div class="col-3"> 
+                                    <img src="../assets/img/slider/nationParkBaVi/IMG_7886-scaled.jpg" alt="" width="100%" height="100%">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-6" style="background-color: rgb(228, 222, 222); border-radius: 5px;">
+                                    <div class="row mb-3"><div class="col-12"><b>Product Ratings</b></div></div>
+                                    <div class="row mb-2">
+                                        <div class="col-2">
+                                            <div><img src="../assets/img/icon/avataruser.jfif" alt="" width="80%" style="border-radius: 50%;"></div>
+                                        </div>
+                                        <div class="col-9" style="background-color: white; border-radius: 5px">
+                                            <b>Sakura</b> <br>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span> <br>
+                                            Amazing
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row"><b>Your rating</b></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-lg-6">
+                                        <label for="exampleFormControlTextarea1" class="form-label"><b>Your comment</b></label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your comment...."></textarea>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-3">
+                                        <button class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="menu_Animals" class="tab-content-item">
+                            <div class="row"><div class="col-12"><p class="text-center" style="font-family:monospace;font-size:30px">Animals in Ba Vi National Park</p></div></div>
+                            <p style="font-family:monospace">Ba Vi National Park successfully nurtures rare and precious animals with different natural habitats
+                                . This process requires a serious investment, careful selection and admission, creating a living place that is suitable for the natural living conditions of the animal to the daily care and nurturing so that the animal can enjoy it. best adapted to the living environment in Vietnam. Existing imported animals in Ba Vi are all rare in nature such as rhinoceros, antelope, giraffes, horses, hippos, gibbons, monkeys, etc. The successful rearing of all precious animals This rare event is also a positive action of Ba Vi in contributing to the protection of the earth's fauna.</p>
+                            <div class="row"><div class="col-12"><p class="text-center" style="font-family:monospace;font-size:30px">Animal list</p></div></div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                GREATER KUDU
+                                            </button>
+                                          </h2>
+                                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                              <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <tr><td><i>Tragelaphus strepsiceros Pallas, 1766</i></td></tr><br><br>
+                                                    <tr><td>The greater kudu (Tragelaphus strepsiceros) is a woodland antelope found throughout eastern and southern Africa. Despite occupying such widespread territory, they are sparsely populated in most areas due to declining habitat, deforestation, and poaching.[2] The greater kudu is one of two species commonly known as kudu, the other being the lesser kudu, T. imberbis.</td></tr><br><br>
+                                                    <tr><td><b>Characteristics:</b> Weight 120 – 315 kg</td></tr><br><br>
+                                                    <tr><td><b>Distribution:</b> South Africa.</td></tr><br><br>
+                                                    <tr><td><b>Ecological:</b> Lives in savanna grasslands, forests with many shrubs.</td></tr><br><br>
+                                                    <tr><td><b>Food:</b> leaves, grass, fruits, flowers…</td></tr><br><br>
+                                                    <tr><td><b>Reproduction:</b> 8 months pregnant, giving birth to 1 child / litter.</td></tr><br><br>
+                                                    <tr><td><b>Status:</b> Least concem (LR)</td></tr>
+                                                </div>
+                                                <div class="col-6 img-nor"><img src="../assets/img/slider/nationParkBaVi/330px-Male_greater_kudu.jpg" alt="" width="100%" height="100%"></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                WHITE RHINOCEROS
+                                            </button>
+                                          </h2>
+                                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                  <div class="col-12 col-lg-6">
+                                                      <tr><td><i>Ceratotherium simum Burchell, 1817</i></td></tr><br><br>
+                                                      <tr><td>The white rhinoceros, white rhino or square-lipped rhinoceros (Ceratotherium simum) is the largest extant species of rhinoceros. It has a wide mouth used for grazing and is the most social of all rhino species. The white rhinoceros consists of two subspecies: the southern white rhinoceros, with an estimated 19,682–21,077 wild-living animals in the year 2015,[3] and the much rarer northern white rhinoceros. The northern subspecies has very few remaining individuals, with only two confirmed left in 2018 (two females: Fatu, 18 and Najin, 29), both in captivity. Sudan, the world's last known male Northern white rhinoceros, died in Kenya on 19 March 2018 at age 45.</td></tr><br><br>
+                                                      <tr><td><b>Characteristics:</b> Weight 1700 – 2300 kg</td></tr><br><br>
+                                                    <tr><td><b>Distribution:</b> South Africa, Namibia, Zimbabwe, and Kenya/pages/nationParkBaVi.html.</td></tr><br><br>
+                                                    <tr><td><b>Ecological:</b> Lives in savanna grasslands, forests with many shrubs.</td></tr><br><br>
+                                                    <tr><td><b>Food:</b> leaves, grass, fruits, flowers…</td></tr><br><br>
+                                                    <tr><td><b>Reproduction:</b> 8 months pregnant, giving birth to 1 child / litter.</td></tr><br><br>
+                                                    <tr><td><b>Status:</b> Least concem (LR)</td></tr>
+                                                  </div>
+                                                  <div class="col-6 img-nor"><img src="../assets/img/slider/nationParkBaVi/white-rhinoceros.jpg" alt="" width="100%" height="100%"></div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                RING-TAILED LEMUR
+                                            </button>
+                                          </h2>
+                                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                  <div class="col-12 col-lg-6">
+                                                      <tr><td><i>Lemur catta Linnaeus, 1758</i></td></tr><br><br>
+                                                      <tr><td>The ring-tailed lemur (Lemur catta) is a large strepsirrhine primate and the most recognized lemur due to its long, black and white ringed tail. It belongs to Lemuridae, one of five lemur families, and is the only member of the Lemur genus. Like all lemurs it is endemic to the island of Madagascar and endangered. Known locally in Malagasy as maky ([makʲ] (listen), spelled maki in French) or hira, it inhabits gallery forests to spiny scrub in the southern regions of the island. It is omnivorous and the most terrestrial of extant lemurs. The animal is diurnal, being active exclusively in daylight hours.</td></tr><br><br>
+                                                      <tr><td><b>Characteristics:</b> Weight 2.2 kg</td></tr><br><br>
+                                                    <tr><td><b>Distribution:</b> African island of Madagascar.</td></tr><br><br>
+                                                    <tr><td><b>Ecological:</b> Lives in savanna grasslands, forests with many shrubs.</td></tr><br><br>
+                                                    <tr><td><b>Food:</b> leaves, grass, fruits, flowers…</td></tr><br><br>
+                                                    <tr><td><b>Reproduction:</b> 8 months pregnant, giving birth to 1 child / litter.</td></tr><br><br>
+                                                    <tr><td><b>Status:</b> Least concem (LR)</td></tr>
+                                                  </div>
+                                                  <div class="col-6 text-right img-nor"><img src="../assets/img/slider/nationParkBaVi/Ring-tailed_lemur.jpg" alt="" width="80%" height="80%"></div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFour">
+                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                                                SQUIRREL MONKEY
+                                              </button>
+                                            </h2>
+                                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                              <div class="accordion-body">
+                                                  <div class="row">
+                                                    <div class="col-12 col-lg-6">
+                                                        <tr><td><i>Saimiri sciureus Linnaeus, 1758</i></td></tr><br><br>
+                                                        <tr><td>Squirrel monkeys are New World monkeys of the genus Saimiri. Saimiri is the only genus in the subfamily Saimirinae. The name of the genus is of Tupi origin (sai-mirím or çai-mbirín, with sai meaning 'monkey' and mirím meaning 'small') and was also used as an English name by early researchers. Squirrel monkeys live in the tropical forests of Central and South America in the canopy layer. Most species have parapatric or allopatric ranges in the Amazon, while S. oerstedii is found disjunctly in Costa Rica and Panama.
+                                                            There are two main groups of squirrel monkeys recognized. They are differentiated based on the shape of the white coloration above the eyes. In total there are 5 recognized species. Squirrel monkeys have short and close fur colored black at the shoulders, yellow or orange fur along the back and extremities, and white on the face.</td></tr><br><br>
+                                                            <tr><td><b>Characteristics:</b> Weight 1.1 kg</td></tr><br><br>
+                                                            <tr><td><b>Distribution:</b> Brazil, Bolivia, Colombia, Peru, and Venezuela.</td></tr><br><br>
+                                                            <tr><td><b>Ecological:</b> Lives in savanna grasslands, forests with many shrubs.</td></tr><br><br>
+                                                            <tr><td><b>Food:</b> leaves, grass, fruits, flowers…</td></tr><br><br>
+                                                            <tr><td><b>Reproduction:</b> 8 months pregnant, giving birth to 1 child / litter.</td></tr><br><br>
+                                                            <tr><td><b>Status:</b> Least concem (LR)</td></tr>
+                                                    </div>
+                                                    <div class="col-6 img-nor"><img src="../assets/img/slider/nationParkBaVi/Mono_ardilla_común_(Saimiri_sciureus),_Tierpark_Hellabrunn,_Múnich,_Alemania,_2012-06-17,_DD_04.jfif" alt="" width="100%" height="70%"></div>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFive">
+                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                                                GIRAFFE
+                                              </button>
+                                            </h2>
+                                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                              <div class="accordion-body">
+                                                  <div class="row">
+                                                    <div class="col-12 col-lg-6">
+                                                        <tr><td><i>Giraffa camelopardalis Linnaeus, 1758</i></td></tr><br><br>
+                                                        <tr><td>The giraffe is a large African hoofed mammal belonging to the genus Giraffa. It is the tallest living terrestrial animal and the largest ruminant on Earth. Traditionally, giraffes were thought to be one species, Giraffa camelopardalis, with nine subspecies. Most recently, researchers proposed dividing them into up to eight extant species due to new research into their mitochondrial and nuclear DNA, as well as morphological measurements. Seven other extinct species of Giraffa are known from the fossil record.</td></tr><br><br>
+                                                        <tr><td><b>Characteristics:</b> Weight 800-1900 kg</td></tr><br><br>
+                                                    <tr><td><b>Distribution:</b> South Africa in the south, and from Niger in the west to Somalia in the east.</td></tr><br><br>
+                                                    <tr><td><b>Ecological:</b> Lives in savanna grasslands, forests with many shrubs.</td></tr><br><br>
+                                                    <tr><td><b>Food:</b> leaves, grass, fruits, flowers…</td></tr><br><br>
+                                                    <tr><td><b>Reproduction:</b> 8 months pregnant, giving birth to 1 child / litter.</td></tr><br><br>
+                                                    <tr><td><b>Status:</b> Least concem (LR)</td></tr>
+                                                    </div>
+                                                    <div class="col-6 img-nor"><img src="../assets/img/slider/nationParkBaVi/Giraffe.jfif" alt="" width="100%" height="90%"></div>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingSix">
+                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
+                                                HIPPOPOTAMUS
+                                              </button>
+                                            </h2>
+                                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                              <div class="accordion-body">
+                                                  <div class="row">
+                                                    <div class="col-12 col-lg-6">
+                                                        <tr><td><i>Hippopotamus amphibius Linnaeus, 1758</i></td></tr><br><br>
+                                                        <tr><td>The hippopotamus (/ˌhɪpəˈpɒtəməs/ HIP-ə-POT-ə-məs;[3] pl: hippopotamuses or hippopotami; Hippopotamus amphibius), also called the hippo, common hippopotamus, or river hippopotamus, is a large semiaquatic mammal native to sub-Saharan Africa. It is one of only two extant species in the family Hippopotamidae, the other being the pygmy hippopotamus (Choeropsis liberiensis or Hexaprotodon liberiensis). Its name comes from the ancient Greek for "river horse" (ἱπποπόταμος).</td></tr><br><br>
+                                                        <tr><td><b>Characteristics:</b> Weight 1500 – 1800 kg</td></tr><br><br>
+                                                    <tr><td><b>Distribution:</b> Ethiopia, Somalia, and Sudan, west to The Gambia, and south to South Africa.</td></tr><br><br>
+                                                    <tr><td><b>Ecological:</b> Lives in savanna grasslands, forests with many shrubs.</td></tr><br><br>
+                                                    <tr><td><b>Food:</b> leaves, grass, fruits, flowers…</td></tr><br><br>
+                                                    <tr><td><b>Reproduction:</b> 8 months pregnant, giving birth to 1 child / litter.</td></tr><br><br>
+                                                    <tr><td><b>Status:</b> Least concem (LR)</td></tr>
+                                                    </div>
+                                                    <div class="col-6 img-nor"><img src="../assets/img/slider/nationParkBaVi/hippopotamus-river-horse.jpg" alt="" width="100%" height="100%"></div>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingSeven">
+                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseTwo">
+                                                SCARLET IBIS
+                                              </button>
+                                            </h2>
+                                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                              <div class="accordion-body">
+                                                  <div class="row">
+                                                    <div class="col-12 col-lg-6">
+                                                        <tr><td><i>Eudocimus ruber Linnaeus, 1758</i></td></tr><br><br>
+                                                        <tr><td>The scarlet ibis (Eudocimus ruber) is a species of ibis in the bird family Threskiornithidae. It inhabits tropical South America and part of the Caribbean. In form, it resembles most of the other twenty-seven extant species of ibis, but its remarkably brilliant scarlet coloration makes it unmistakable. It is one of the two national birds of Trinidad and Tobago, and its Tupi–Guarani name, guará, is part of the name of several municipalities along the coast of Brazil.[3]</td></tr><br><br>
+                                                        <tr><td><b>Characteristics:</b> Weight 600 - 900 g</td></tr><br><br>
+                                                        <tr><td><b>Distribution:</b> South America.</td></tr><br><br>
+                                                        <tr><td><b>Ecological:</b> Lives in savanna grasslands, forests with many shrubs.</td></tr><br><br>
+                                                        <tr><td><b>Food:</b> leaves, grass, fruits, flowers…</td></tr><br><br>
+                                                        <tr><td><b>Reproduction:</b> 8 months pregnant, giving birth to 1 child / litter.</td></tr><br><br>
+                                                        <tr><td><b>Status:</b> Least concem (LR)</td></tr>
+                                                    </div>
+                                                    <div class="col-6 img-nor"><img src="../assets/img/slider/nationParkBaVi/scarlet.jfif" alt="" width="100%" height="100%"></div>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                </div>
+                            </div>  
+                               
+                        </div>
+
+                        <div id="menu_Plants" class="tab-content-item">
+                            <div class="row"><div class="col-12"><p class="text-center" style="font-family:monospace;font-size:30px">
+                                Plant list</p></div></div>
+                            <div class="row mb-4 mt-2">
+                                <div class="col-12 d-flex" style="justify-content: center; gap: 30px;">
+                                    <div class="card" style="width: 18rem;">
+                                        <div class="card-item"></div>
+                                        <img class="card-img-top w-100" src="../assets/img/slider/nationParkBaVi/spider-plant_t50-ss.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Spider Plant</h5>
+                                          <p class="card-text">Spider plants produce a rosette of long, thin, arched foliage that is solid green or variegated with white.</p>
+                                        </div>
+                                      </div>
+                                      <div class="card" style="width: 18rem;">
+                                        <div class="card-item"></div>
+                                        <img class="card-img-top" src="../assets/img/slider/nationParkBaVi/chau-cay-trau-ba-dep.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Golden Pothos</h5>
+                                          <p class="card-text">Pothos may be one of the easiest plants to grow, but if you're taking this variety or one of its cultivars into your home, you'll still want to have a few plant-care tips and tricks up your sleeve.</p>
+                                        </div>
+                                      </div>
+                                      <div class="card" style="width: 18rem;">
+                                        <div class="card-item"></div>
+                                        <img class="card-img-top" src="../assets/img/slider/nationParkBaVi/Spathiphyllumthebotanicalbar_1445x.webp" alt="Card image cap">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Peace Lily</h5>
+                                          <p class="card-text">Peace lilies are tropical, evergreen plants that thrive on the forest floor, where they receive dappled sunlight and consistent moisture and humidity.</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-12 d-flex" style="justify-content: center; gap: 30px">
+                                    <div class="card" style="width: 18rem;">
+                                        <div class="card-item" style="width: 100%; height: 190.66px;"></div>
+                                        <img class="card-img-top" src="../assets/img/slider/nationParkBaVi/aloe-vera-white-pot_sunwand24-ss_edit.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Aloe Vera</h5>
+                                          <p class="card-text">Aloe vera is a succulent plant species of the genus Aloe. It is widely distributed, and is considered an invasive species in many world regions.</p>
+                                        </div>
+                                      </div>
+                                      <div class="card" style="width: 18rem;">
+                                        <div class="card-item" style="width: 100%; height: 190.66px;"></div>
+                                        <img class="card-img-top" src="../assets/img/slider/nationParkBaVi/1632409817274.jpeg" alt="Card image cap">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Aglaonema White</h5>
+                                          <p class="card-text">Aglaonema is a genus of flowering plants in the arum family, Araceae. They are native to tropical and subtropical regions of Asia and New Guinea. They are known commonly as Chinese evergreens.</p>
+                                        </div>
+                                      </div>
+                                      <div class="card" style="width: 18rem;">
+                                        <div class="card-item" style="width: 100%; height: 190.66px;"></div>
+                                        <img class="card-img-top" src="../assets/img/slider/nationParkBaVi/bPKnoBhjzzSQBrGUAkQYyZXNFUwRRFyYnwr7M2YN.webp" alt="Card image cap">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Gerbera</h5>
+                                          <p class="card-text">Gerbera is a genus of plants in the Asteraceae family. The first scientific description of a Gerbera was made by J. D. Hooker in Curtis's Botanical Magazine in 1889 when he described Gerbera jamesonii.</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="menu_BookTickets" class="tab-content-item">
+                            <div class="row mb-xl-4">
+                                <div class="col-md-2">
+                                    <img src="../assets/img/slider/nationParkBaVi/Logo-Bavi.png" alt="" width="100%">
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="img-nor" style="font-size:40px"><b>Ba Vi National Park</b></p>
+                                </div>
+                            </div><hr>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="date" class="dateSticket"><br><br>
+                                    <p><i class="fa-regular fa-calendar-days"></i> Ticket booking time</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                                <button class="btn btn-warning mr-2 mb-2 hours7">07:00 AM</button>
+                                                <button class="btn btn-warning mr-2 mb-2 hours8">08:00 AM</button>
+                                                <button class="btn btn-warning mr-2 mb-2 hours9">09:00 AM</button>
+                                                <button class="btn btn-warning mr-2 mb-2 hours10">10:00 AM</button>
+                                                <button class="btn btn-warning mr-2 mb-2 hours11">11:00 AM</button>
+                                        </div>     
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">Click here <i class="fa-regular fa-hand-point-up"></i> to book tickets</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row mb-3"><div class="col-12"><b>Address:</b> Tan Linh Commune, Ba Vi District, Hanoi.</div></div><hr>
+                                    <div class="row mb-3"><div class="col-12"><b>Price:</b><span id="price"> 5 $</span></div></div>
+                                    <div class="row mb-3">
+                                        <div class="col-12">
+                                            <b>Amount: </b>
+                                            <button class="btn btn-light" id="btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                            <input id="value" type="text" style="width: 50px; text-align: center" value="1">
+                                            <button class="btn btn-light" id="btn-plus"><i class="fa-solid fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row mb-3">
+                                        <div class="col-12">
+                                            <button class="btn btn-success">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        
+                        <div id="notification" class="tab-content-item">
+                            <div class="alert alert-danger mt-1" role="alert">
+                                You must be logged in to book tickets
+                                <a href="../pages/login.html"><button class="btn btn-primary">Click here to log in</button></a>
+                            </div>
+                        </div>
+                  </nav>
+            </div>
+        </section>
+        <!-- Giải thuật duyệt và render Danh sách sản phẩm theo dòng, cột của Bootstrap -->
+        <!-- End block content -->
+    </main><hr>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <dt>
+                        <h4>Sign up for our newsletter</h4>
+                    </dt>
+                    <dd>Receive new travel stories from Vietnam once a month in your inbox.</dd>
+                    <dd>
+                        <form action="">
+                            <div class="mb-3">
+                                <input type="email" class="form-control p-3" id="email" placeholder="Your Email...">
+                            </div>
+                            <div>
+                                <button class="btn btn-primary w-100" type="button">Sign Up</button>
+                              </div>
+                        </form>
+                    </dd>
+                </div>
+                <div class="col-lg-4">
+                    <dt>
+                        <h4>INFOMATION</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Visas for VN</li>
+                            <li class="list-group-item">Beginner Guide</li>
+                            <li class="list-group-item">FAQs</li>
+                          </ul>
+                    </dt>
+                </div>
+                <div class="col-lg-4">
+                    <dt>
+                        <h4>FOLLOW US ON</h4>
+                        <ul class="d-flex flex-row">
+                            <li><img src="../assets/img/icon/Vietnam tourism.jpg" alt=""></li>
+                            <li><img src="../assets/img/icon/Vietnam tourism social web-2_4.jpg" alt=""></li>
+                            <li><img src="../assets/img/icon/Vietnam tourism social web-3_6.jpg" alt=""></li>
+                            <li><img src="../assets/img/icon/Vietnam tourism social web_4.jpg" alt=""></li>
+                            <li><img src="../assets/img/icon/Vietnam tourism social web-4_4.jpg" alt=""></li>
+                            <li><img src="../assets/img/icon/logo-bw.png" alt="" width="80%"></li>
+                        </ul>
+                    </dt>
+                    <dd>
+                        <p class="desc">
+                            Welcome to the official website of Vietnam National Administration of Tourism. Visit our social media pages for more travel inspiration.
+                        </p>
+                    </dd>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright container">
+                <div class="row">
+                    <div class="col-md-5">
+                        © 2022 Official Website Vietnam Tourism
+                    </div>
+                    <div class="col-md-4">
+                        Email: contactGroup4@gmail.com
+                    </div>
+                    <div class="col-md-3">
+                        Privacy Policy
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/popperjs/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom script - Các file js do mình tự viết -->
+    <script src="../assets/js/app.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            // show username
+            $('.dateSticket').attr("min", valiDate())
+            if(localStorage.isLogin == "true"){
+                $("#userName").html(localStorage.getItem("email"));   
+            }
+            
+            // plus minus value
+            $("#btn-plus").click(function(){
+                $("#value").attr("value", parseInt($("#value").val()) + 1)
+                $("#price").html(" " + parseInt($("#value").val()) * 5 + " $")
+                if(parseInt($("#value").val()) != 1){
+                    $("#btn-minus").removeClass("disabled")
+                }       
+            })
+            $("#btn-minus").click(function(){
+               $("#value").attr("value", parseInt($("#value").val()) - 1)
+               $("#price").html(" " + parseInt($("#value").val()) * 5 + " $")
+               if(parseInt($("#value").val()) < 2){
+                    $("#btn-minus").addClass("disabled")
+                }
+            })
+            $("#value").keydown(function (e) {
+                if ((e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                    (e.keyCode >= 35 && e.keyCode <= 40) ||
+                    $.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1) {
+                    return;
+                }
+                if ((e.shiftKey || (e.keyCode < 49 || e.keyCode > 57)) &&
+                    (e.keyCode < 96 || e.keyCode > 105)) {
+                    e.preventDefault();
+                }
+            });
+            checkLogIn();
+            showHideIcon();
+            $('.tab-content-item').hide()
+            $('.tab-content-item:first-child').fadeIn()
+            $('.nav-tabs li').click(function(){
+                //Active nav tabs
+                $('.nav-tabs li').removeClass('active')
+                $(this).addClass('active')
+                //Show tab-content item
+                let id_tab_content = $(this).children('a').attr('href')
+                if(id_tab_content == "#menu_BookTickets" && localStorage.isLogin == "false"){
+                    $('.tab-content-item').hide()
+                    $('#notification').fadeIn()
+                }
+                else{
+                    $('.tab-content-item').hide()
+                    $(id_tab_content).fadeIn()
+                }  
+                return false
+            })
+            var hours = 7
+            $(".btn-warning").click(function(){
+                if($(this).hasClass("hours7") == true){
+                    hours = 7
+                }
+                else if($(this).hasClass("hours8") == true){
+                    hours = 8
+                }
+                else if($(this).hasClass("hours9") == true){
+                    hours = 9
+                }
+                else if($(this).hasClass("hours10") == true){
+                    hours = 10
+                }
+                else if($(this).hasClass("hours11") == true){
+                    hours = 11
+                }
+            })
+
+            $(".btn-success").click(function(){
+                let tickets = {
+                    hours: hours,
+                    day: $(".dateSticket").val(),
+                    price: parseInt($("#value").val()) * 5,
+                    amount: $("#value").val()
+                }
+                localStorage.setItem("tickets", JSON.stringify(tickets))
+                alert("Successful booking. please check in profile")
+            })
+            $('.logOut').click(function(){logOut()})
+        })
+        
+        var valiDate = () =>{
+            var minDate = new Date().toLocaleDateString('sv-SE')
+            console.log(minDate)
+            return minDate
+        }
+        
+        
+    </script>
+
+</body>
+
+</html>

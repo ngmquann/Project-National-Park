@@ -1,0 +1,31 @@
+.card-text{
+  margin-bottom: 0;
+}
+.group-card{
+  gap: 40px;
+  justify-content: center;
+}
+.group-card .card{
+  min-height: 310px;
+}
+
+.card-img-top{
+  width: 286px;
+  height: 124px;
+  transform: scale(0.9);
+  transition: transform .3s;
+}
+
+.card-img-top:hover{
+  transform: scale(1.0);
+}
+
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover{
+  color: unset;
+  text-decoration: none;
+}

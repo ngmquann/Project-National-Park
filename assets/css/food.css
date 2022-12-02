@@ -1,0 +1,10 @@
+.btn-close{
+  background: none;
+}
+.group-card button img{
+  transform: scale(0.9);
+}
+.group-card button img:hover{
+  transform: scale(1.0);
+  transition: ease-in-out 0.3s;
+}

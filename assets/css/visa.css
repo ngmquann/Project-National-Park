@@ -1,0 +1,35 @@
+
+
+#navbar-tabs .active a{
+  border-bottom: 3px solid red;
+}
+
+.content_padding{
+  padding: 0 20% 0 20%;
+  font-size: 17px;
+}
+
+.content_title{
+  font-family:monospace;
+  color: #9e0b0f;
+  font-size: 22px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+
+
+.content_italic{
+  color: gray;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.flag{
+  margin-right: 8px;
+}
+
+td{
+  height: 40px;
+  line-height: 40px ;
+}
